@@ -22,22 +22,12 @@ Feature Scaling: StandardScaler applied to training and testing datasets.
 5. Gradient Boosting – Boosting Ensemble
 6. Stacking Classifier – Multi-Level Ensemble Learning
 
-**Model Performance Comparison**
-The following results were obtained from the notebook's test-set evaluation.
+**Key Performance Improvements & Observations**
 
-Model                          Accuracy              Precision (Fraud)                Recall (Fraud)                 F1-score
-Random Forest                   99.91%                    82%                            59%                          0.69
-Balanced Random Forest          99.95%                    96%                            73%                          0.83
-SMOTE + AdaBoost                98.13%                     8%                            91%                          0.14
-SMOTE + Gradient Boosting       98.02%                     7%                            92%                          0.14
-
-**ROC-AUC Comparison**
-  
-  Model                          ROC-AUC
-Random Forest                    0.9522
-Balanced Random Forest           0.9534
-SMOTE + AdaBoost                 0.9712
-SMOTE + Gradient Boosting        0.9794
+1. Random Forest to Balanced Random Forest: Fraud recall improved from 59% to 73%, while fraud precision increased from 82% to 96%.
+2. Random Forest to SMOTE + AdaBoost: Fraud recall increased from 59% to 91%, demonstrating substantially improved fraud identification, although precision decreased considerably.
+3. Random Forest to SMOTE + Gradient Boosting: Fraud recall increased from 59% to 92%, with ROC-AUC improving from 0.9522 to 0.9794.
+4. Best ROC-AUC: Gradient Boosting achieved 0.9794, indicating the strongest ranking performance among the evaluated models.
 
 **Conclusion**
 
